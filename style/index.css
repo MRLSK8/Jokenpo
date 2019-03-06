@@ -76,13 +76,14 @@ ul#jogador-escolha li a, ul#computador-escolha li a {
 }
 ul#jogador-escolha li a:hover,  ul#jogador-escolha li a.selecionado,  ul#computador-escolha li a.selecionado {
     opacity: 1;
+    cursor: pointer;
 }
 
 ul#jogador-escolha li a img, ul#computador-escolha li a img {
     max-width: 100px;
 }
 
-#mensagens {
+#mensagen {
     background-color: #b2bec3;
     border-radius: 5px;
     text-align: center;
@@ -117,5 +118,6 @@ span {
     font-weight: bold;
 }
 input {
-    padding-left: 7px;
+    padding: 4px;
+    padding-left: 10px;
 }
