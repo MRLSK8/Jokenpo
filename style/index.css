@@ -106,3 +106,16 @@ button.novojogo:hover {
     opacity: 1;
     cursor: pointer;
 }
+
+#getnomedojogador {
+    margin-left: 0;
+    padding-left: 0;
+    padding-bottom: 10px;
+}
+span {
+    font-size: 23px;
+    font-weight: bold;
+}
+input {
+    padding-left: 7px;
+}

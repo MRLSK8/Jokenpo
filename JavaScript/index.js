@@ -6,8 +6,6 @@ function jogar(escolha){
     computadorEscolha = Math.floor(Math.random() * (3-1 + 1) + 1);
     jogadorEscolha = escolha;
 
-    
-
     ganhador =  EncontraGanhador(jogadorEscolha, computadorEscolha);
 
     document.getElementById("jogador-escolha-" + jogadorEscolha).classList.add("selecionado");
@@ -17,7 +15,7 @@ function jogar(escolha){
     if(ganhador == 0){
         document.getElementById("mensagens").innerHTML = 'Empate';
     }else if(ganhador == 1){
-        document.getElementById("mensagens").innerHTML = 'O jogador Marcelo ganhou';
+        document.getElementById("mensagens").innerHTML = 'O jogador ' +  document.getElementById('jogador-nome').innerHTML + ' ganhou';
         document.getElementById("jogador-pontos").innerHTML = parseInt(document.getElementById("jogador-pontos").innerHTML) + 1;
     }else{
         document.getElementById("mensagens").innerHTML = 'O computador ganhou';
@@ -28,7 +26,7 @@ function jogar(escolha){
         document.getElementById("mensagens").innerHTML = '...';
         document.getElementById("jogador-escolha-" + jogadorEscolha).classList.remove("selecionado");
         document.getElementById("computador-escolha-" + computadorEscolha).classList.remove("selecionado");
-    }, 1500);
+    }, 1000);
 
 }
 
