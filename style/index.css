@@ -72,7 +72,7 @@ ul#jogador-escolha li, ul#computador-escolha li {
 ul#jogador-escolha li a, ul#computador-escolha li a {
     opacity: .2;
 }
-ul#jogador-escolha li a:hover{
+ul#jogador-escolha li a:hover,  ul#jogador-escolha li a.selecionado,  ul#computador-escolha li a.selecionado{
     opacity: 1;
 }
 
@@ -83,6 +83,7 @@ ul#jogador-escolha li a img, ul#computador-escolha li a img {
 #mensagens {
     background-color: #b2bec3;
     border-radius: 5px;
+    text-align: center;
     font-size: 32px;
     padding: 20px;
     margin: 40px 0;
