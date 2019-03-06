@@ -28,7 +28,7 @@ function jogar(escolha){
         document.getElementById("mensagens").innerHTML = '...';
         document.getElementById("jogador-escolha-" + jogadorEscolha).classList.remove("selecionado");
         document.getElementById("computador-escolha-" + computadorEscolha).classList.remove("selecionado");
-    }, 3000);
+    }, 1500);
 
 }
 
@@ -53,4 +53,9 @@ function EncontraGanhador(jogadorEscolha, computadorEscolha){
     }
 
     return ganhador;
+}
+
+function NovoJogo(){
+    document.getElementById("jogador-pontos").innerHTML = 0;
+    document.getElementById("computador-pontos").innerHTML = 0;
 }

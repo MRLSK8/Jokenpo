@@ -4,7 +4,8 @@
 }
 
 #titulo {
-    color: #0010f3;
+    color: #333030;
+    margin-left: 47px;
     text-align: center;
 }
 
@@ -67,12 +68,13 @@ ul#jogador-escolha, ul#computador-escolha {
 
 ul#jogador-escolha li, ul#computador-escolha li {
     display: inline;
+    margin-left: 20px;
 }
 
 ul#jogador-escolha li a, ul#computador-escolha li a {
     opacity: .2;
 }
-ul#jogador-escolha li a:hover,  ul#jogador-escolha li a.selecionado,  ul#computador-escolha li a.selecionado{
+ul#jogador-escolha li a:hover,  ul#jogador-escolha li a.selecionado,  ul#computador-escolha li a.selecionado {
     opacity: 1;
 }
 
@@ -87,4 +89,20 @@ ul#jogador-escolha li a img, ul#computador-escolha li a img {
     font-size: 32px;
     padding: 20px;
     margin: 40px 0;
+}
+
+button.novojogo {
+    margin-left: 595px;
+    font-weight: bold;
+    font-size: 20px;
+    width: 150px;
+    padding: 10px;
+    border-radius: 3px;
+    outline: none;
+    opacity: .6;
+}
+
+button.novojogo:hover {
+    opacity: 1;
+    cursor: pointer;
 }
