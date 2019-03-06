@@ -23,7 +23,7 @@ function jogar(escolha){
         document.getElementById("computador-pontos").innerHTML = parseInt(document.getElementById("computador-pontos").innerHTML) + 1;
     }
 
-    // Verifica se alquem ganhou
+    // Verifica se alguem ganhou
     if(parseInt(document.getElementById("jogador-pontos").innerHTML) == pontosParaGanhar){
         NovoJogo();
         document.getElementById("mensagen").innerHTML = ' Parabéns ' + document.getElementById('jogador-nome').innerHTML + ', você ganhou o jogo!';
@@ -64,9 +64,22 @@ function EncontraGanhador(jogadorEscolha, computadorEscolha){
 }
 
 function NovoJogo(){
-    document.getElementById("jogador-pontos").innerHTML = 0;
-    document.getElementById("computador-pontos").innerHTML = 0;
-    document.getElementById("jogador-escolha-" + jogadorEscolha).classList.remove("selecionado");
-    document.getElementById("computador-escolha-" + computadorEscolha).classList.remove("selecionado");
-    document.getElementById("mensagen").innerHTML = '...';
+    if(jogadorEscolha != -1 && computadorEscolha != -1){
+        document.getElementById("jogador-pontos").innerHTML = 0;
+        document.getElementById("computador-pontos").innerHTML = 0;
+        document.getElementById("jogador-escolha-" + jogadorEscolha).classList.remove("selecionado");
+        document.getElementById("computador-escolha-" + computadorEscolha).classList.remove("selecionado");
+        document.getElementById("mensagen").innerHTML = '...';
+    }
+
+    document.getElementById('jogador-nome').innerHTML = "--------------";
+    document.getElementById("input").removeAttribute("disabled");
+}
+
+function TeclaEnterPrecionada(event){
+    if(event.keyCode == 13){		
+        document.getElementById('jogador-nome').innerHTML = document.getElementById("input").value;
+        document.getElementById("input").value = "";
+        document.getElementById("input").setAttribute("disabled", "");
+    }
 }
