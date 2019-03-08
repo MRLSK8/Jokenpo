@@ -1,2 +1,2 @@
 # Jokenpo
-![Screenshot](tela.png)
+![tela](tela.png)
